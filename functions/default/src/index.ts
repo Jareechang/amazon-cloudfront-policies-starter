@@ -7,6 +7,9 @@ import {
 export const handler = async(
   event: CloudFrontFunctionsEvent
 ): Promise<APIGatewayProxyResult> => {
+  console.log('Event : ', JSON.stringify({
+    event,
+  }, null, 4));
   return {
     statusCode: 200,
     headers: {
