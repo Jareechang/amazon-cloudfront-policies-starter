@@ -17,7 +17,7 @@ output "function_name_origin" {
 
 #output "lambda_url" {
   #description = "Lambda URL"
-  #value = aws_lambda_function_url.test.function_url
+  #value = aws_lambda_function_url.origin.function_url
 #}
 
 #output "cf_distribution_domain_url" {
