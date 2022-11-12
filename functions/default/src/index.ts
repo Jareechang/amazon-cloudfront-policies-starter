@@ -4,9 +4,9 @@ import {
 } from 'aws-lambda';
 
 // Default starter
-export const handler = (
+export const handler = async(
   event: CloudFrontFunctionsEvent
-): APIGatewayProxyResult => {
+): Promise<APIGatewayProxyResult> => {
   return {
     statusCode: 200,
     headers: {

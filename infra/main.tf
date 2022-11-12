@@ -26,12 +26,12 @@ module "lambda_origin" {
   code_src             = "../functions/default/main.zip"
   bucket_id            = aws_s3_bucket.lambda_bucket.id
   timeout              = local.default_lambda_timeout
-  function_name        = "default-function"
+  function_name        = "Origin-Server-function"
   runtime              = "nodejs14.x"
   handler              = "dist/index.handler"
   publish              = true
-  alias_name           = "ingestion-dev"
-  alias_description    = "Alias for default function"
+  alias_name           = "origin-server-fn"
+  alias_description    = "Alias for origin server function"
   environment_vars = {
     DefaultRegion   = var.aws_region
   }
